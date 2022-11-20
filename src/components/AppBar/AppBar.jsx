@@ -7,8 +7,8 @@ export const AppBar = () => {
     return (
         <Header>
             <Navigation />
-            <UserMenu />
             <UserAuth />
+            <UserMenu />
         </Header>
     )
 };

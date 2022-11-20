@@ -1,10 +1,10 @@
-
+import { LogoutButton, LogoutUserDescr, UserMenuWrapper } from './UserMenu.styled';
 
 export const UserMenu = () => {
     return (
-        <div>
-        <p>mango@mail.com</p>
-        <button>Logout</button>
-        </div>
+        <UserMenuWrapper>
+            <LogoutUserDescr>mango@mail.com</LogoutUserDescr>
+            <LogoutButton>Logout</LogoutButton>
+        </UserMenuWrapper>
     )
 };
