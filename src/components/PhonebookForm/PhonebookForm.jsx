@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contacts/operations';
-import { selectContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/contacts-operations';
+import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { Box } from "../Box";
 import { LabelStyled, InputStyled, ButtonStyled } from "./PhonebookForm.styled";
 
@@ -16,7 +16,7 @@ export const PhonebookForm = () => {
         window.alert("This contact already exists.");
       }
       else {
-        dispatch(addContact({phone:e.target.elements.phone.value, name:e.target.elements.name.value}));
+        dispatch(addContact({number:e.target.elements.number.value, name:e.target.elements.name.value}));
       }
       e.target.reset();
     };
@@ -37,7 +37,7 @@ export const PhonebookForm = () => {
               Number
             <InputStyled
                type="tel"
-               name="phone"
+               name="number"
                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                required

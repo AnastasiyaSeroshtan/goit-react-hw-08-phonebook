@@ -12,7 +12,6 @@ export const LoginForm = () => {
       const dataUser = {
           email:e.target.elements.email.value,
           password:e.target.elements.password.value,};
-          console.log(dataUser)
       dispatch(login(dataUser));
       e.target.reset();    
   };
