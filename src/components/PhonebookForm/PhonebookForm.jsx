@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contacts-operations';
 import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { Box } from "../Box";
-import { LabelStyled, InputStyled, ButtonStyled } from "./PhonebookForm.styled";
+import { BtnCloseStyle, BtnCloseIconStyle, LabelStyled, InputStyled, ButtonStyled } from "./PhonebookForm.styled";
+// import { MdOutlineClose } from 'react-icons/md';
 
-export const PhonebookForm = () => {
+export const PhonebookForm = ({onClose, onCloseBtn}) => {
   const dispatch = useDispatch();
   const getAllContacts = useSelector(selectContacts);
    
@@ -19,10 +20,12 @@ export const PhonebookForm = () => {
         dispatch(addContact({number:e.target.elements.number.value, name:e.target.elements.name.value}));
       }
       e.target.reset();
+      onClose();
     };
 
     return (
-        <Box as="form" onSubmit={handleSubmit} bg="muted"  border="normal" borderRadius="normal" borderColor="accent" display="block" p={3} mb={3} >
+        <Box as="form" onSubmit={handleSubmit} display="block" >
+            <BtnCloseStyle type='button' onClick={onCloseBtn}> <BtnCloseIconStyle /></BtnCloseStyle>
               <LabelStyled>
               Name
             <InputStyled

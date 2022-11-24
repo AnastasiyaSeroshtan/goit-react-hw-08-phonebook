@@ -18,7 +18,7 @@ export const RegisterForm = () => {
     };
 
     return (
-        <Box as="form" onSubmit={handleSubmit} width="40%" display="block" p={3} >
+        <Box as="form" onSubmit={handleSubmit} width="40%" margin='0 auto' display="block" p={3} >
         <RegisterLabel>
             Name
             <RegisterInput type="text" name="name" required/>

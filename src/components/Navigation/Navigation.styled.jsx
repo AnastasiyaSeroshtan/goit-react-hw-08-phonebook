@@ -20,6 +20,6 @@ export const NavLinkStyled = styled(NavLink)`
     margin-right: ${p => p.theme.space[4]}px;
   }
   :hover{
-        color: ${p => p.theme.colors.accent};
+        color: ${p => p.theme.colors.linkColor};
     };
 `;

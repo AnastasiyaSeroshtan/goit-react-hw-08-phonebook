@@ -58,7 +58,7 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 
 // GET /users​/current
 
-export const getCurrentUser = createAsyncThunk('/users/current', async (_, thunkAPI) => {
+export const fetchingCurrentUser = createAsyncThunk('/users/current', async (_, thunkAPI) => {
   const state = thunkAPI.getState();
   const persistedToken = state.auth.token;
   // console.log('persistedToken', persistedToken)

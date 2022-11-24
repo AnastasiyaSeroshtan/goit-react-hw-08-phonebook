@@ -17,7 +17,7 @@ export const LoginForm = () => {
   };
 
     return (
-        <Box as="form" onSubmit={handleSubmit} width="40%" display="block" p={3} >
+        <Box as="form" onSubmit={handleSubmit} width="40%" margin='0 auto' display="block" p={3} >
           <LabelStyled>
             Email
             <InputStyled type="email" name="email" required />

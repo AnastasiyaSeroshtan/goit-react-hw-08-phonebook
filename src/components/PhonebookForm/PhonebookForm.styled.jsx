@@ -1,4 +1,26 @@
 import styled from "styled-components";
+import { MdOutlineClose } from 'react-icons/md';
+
+export const BtnCloseStyle = styled.button`
+    display: block;
+    margin-left: auto;
+    border: ${p => p.theme.borders.none};
+    outline: none;
+    cursor: pointer;
+    background-color: ${p => p.theme.colors.white};  
+`;
+
+export const BtnCloseIconStyle = styled(MdOutlineClose)`
+    margin-left: auto;
+    /* margin-bottom: ${p => p.theme.space[3]}px; */
+    /* display: block; */
+    width: 20px;
+    height: 20px;
+    
+    :hover{
+        fill: ${p => p.theme.colors.accent};
+    };
+`;
 
 export const LabelStyled = styled.label`
     font-family: ${p => p.theme.fonts.body};
@@ -27,7 +49,11 @@ export const ButtonStyled = styled.button`
     padding-right: ${p => p.theme.space[3]}px;
     padding-bottom: ${p => p.theme.space[2]}px;
     padding-top: ${p => p.theme.space[2]}px;
-    margin-right: ${p => p.theme.space[3]}px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: ${p => p.theme.space[0]}px;
+    margin-top: 55px;
     border: ${p => p.theme.borders.normal};
     border-radius: ${p => p.theme.radii.normal};
     cursor: pointer;
