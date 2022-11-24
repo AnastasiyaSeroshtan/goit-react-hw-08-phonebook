@@ -7,7 +7,7 @@ export const theme = {
         accent: '#db0db5',
         muted: '#f6f6f6',
         linkColor: '#0d1e8b',
-        headerBg: 'rgb(151,48,205)',
+        background: 'rgba(210,161,201,1)',
       },
       fonts: {
         body: 'system-ui, sans-serif',

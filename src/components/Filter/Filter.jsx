@@ -9,10 +9,9 @@ export const Filter = () => {
     const dispatch = useDispatch();
     const handleFilterChange = (e) => dispatch(filterContacts(e.currentTarget.value))
     return (
-        <Box mb={4}>
+        <Box display="block" margin='0 auto'>
             <LabelStyled>
-                Find contacts by name
-                <InputStyled type="text" value={filter} onChange={handleFilterChange}/>
+                <InputStyled type="text" value={filter} onChange={handleFilterChange} placeholder='Find contact by name'/>
             </LabelStyled>
         </Box>
     )

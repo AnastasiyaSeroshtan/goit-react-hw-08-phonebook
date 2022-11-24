@@ -3,7 +3,6 @@ import { addContact } from 'redux/contacts/contacts-operations';
 import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { Box } from "../Box";
 import { BtnCloseStyle, BtnCloseIconStyle, LabelStyled, InputStyled, ButtonStyled } from "./PhonebookForm.styled";
-// import { MdOutlineClose } from 'react-icons/md';
 
 export const PhonebookForm = ({onClose, onCloseBtn}) => {
   const dispatch = useDispatch();

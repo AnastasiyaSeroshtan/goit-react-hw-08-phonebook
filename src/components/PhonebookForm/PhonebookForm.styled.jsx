@@ -12,11 +12,8 @@ export const BtnCloseStyle = styled.button`
 
 export const BtnCloseIconStyle = styled(MdOutlineClose)`
     margin-left: auto;
-    /* margin-bottom: ${p => p.theme.space[3]}px; */
-    /* display: block; */
     width: 20px;
     height: 20px;
-    
     :hover{
         fill: ${p => p.theme.colors.accent};
     };
