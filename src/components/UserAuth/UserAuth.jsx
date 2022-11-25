@@ -1,6 +1,4 @@
 import { UserAuthWrapper, NavLinkStyled, RegisterIconStyled, LogInIconStyled } from './UserAuth.styled';
-// import { FaRegCheckCircle } from 'react-icons/fa';
-// import { AiOutlineLogin } from 'react-icons/ai';
 
 export const UserAuth = () => {
     return (
