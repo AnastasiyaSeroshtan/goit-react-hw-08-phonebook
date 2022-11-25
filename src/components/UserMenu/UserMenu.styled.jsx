@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const UserMenuWrapper = styled.div`
     display: flex;
     align-items: center;
-    padding-left: ${p => p.theme.space[3]}px;
-    padding-right: ${p => p.theme.space[3]}px;
     
     &:not(:last-child) {
     margin-right: ${p => p.theme.space[4]}px;
@@ -39,7 +37,8 @@ export const LogoutButton = styled.button`
     padding-right: ${p => p.theme.space[3]}px;
     padding-bottom: ${p => p.theme.space[2]}px;
     padding-top: ${p => p.theme.space[2]}px;
-    display: block;
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: ${p => p.theme.space[0]}px;
@@ -50,5 +49,15 @@ export const LogoutButton = styled.button`
     :hover{
         color: ${p => p.theme.colors.linkColor};
         background-color: ${p => p.theme.colors.accent};
+    };
+`;
+
+export const LogoutButtonTextStyled = styled.span`
+    color: ${p => p.theme.colors.black};
+    font-family: ${p => p.theme.fonts.body};
+    font-size: ${p => p.theme.fontSizes[2]}px;
+    margin-left: ${p => p.theme.space[3]}px;
+    :hover{
+        color: ${p => p.theme.colors.linkColor};
     };
 `;

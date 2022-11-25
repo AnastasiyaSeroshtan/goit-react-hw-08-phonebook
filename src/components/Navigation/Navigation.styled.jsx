@@ -1,5 +1,11 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { HiOutlineHome } from 'react-icons/hi';
+import { MdOutlinePermContactCalendar} from 'react-icons/md';
+
+export const NavStyled = styled.nav`
+  display: flex;
+`;
 
 export const NavLinkStyled = styled(NavLink)`
     text-decoration: none;
@@ -10,8 +16,11 @@ export const NavLinkStyled = styled(NavLink)`
     padding-right: ${p => p.theme.space[3]}px;
     padding-bottom: ${p => p.theme.space[2]}px;
     padding-top: ${p => p.theme.space[2]}px;
+    /* margin-right: ${p => p.theme.space[3]}px; */
     border-radius: ${p => p.theme.radii.normal};
     cursor: pointer;
+    display: flex;
+    align-items: center;
      &.active {
     color: ${p => p.theme.colors.white};
     background-color: ${p => p.theme.colors.accent};
@@ -22,4 +31,12 @@ export const NavLinkStyled = styled(NavLink)`
   :hover{
         color: ${p => p.theme.colors.linkColor};
     };
+`;
+
+export const HomeIconStyled = styled(HiOutlineHome)`
+    margin-right: ${p => p.theme.space[2]}px;
+`;
+
+export const ContactIconStyled = styled(MdOutlinePermContactCalendar)`
+    margin-right: ${p => p.theme.space[2]}px;
 `;

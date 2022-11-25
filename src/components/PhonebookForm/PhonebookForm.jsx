@@ -3,6 +3,7 @@ import { addContact } from 'redux/contacts/contacts-operations';
 import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { Box } from "../Box";
 import { BtnCloseStyle, BtnCloseIconStyle, LabelStyled, InputStyled, ButtonStyled } from "./PhonebookForm.styled";
+import { toast } from 'react-toastify';
 
 export const PhonebookForm = ({onClose, onCloseBtn}) => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ export const PhonebookForm = ({onClose, onCloseBtn}) => {
       const getName = getAllContacts.find(contact => contact.name.toLowerCase() === e.target.elements.name.value.toLowerCase());
 
       if (getName){
-        window.alert("This contact already exists.");
+        toast.info('This contact already exists');
       }
       else {
         dispatch(addContact({number:e.target.elements.number.value, name:e.target.elements.name.value}));

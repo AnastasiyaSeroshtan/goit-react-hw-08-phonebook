@@ -1,5 +1,11 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { FaRegCheckCircle } from 'react-icons/fa';
+import { AiOutlineLogin } from 'react-icons/ai';
+
+export const UserAuthWrapper = styled.nav`
+  display: flex;
+`;
 
 export const NavLinkStyled = styled(NavLink)`
     text-decoration: none;
@@ -12,6 +18,8 @@ export const NavLinkStyled = styled(NavLink)`
     padding-top: ${p => p.theme.space[2]}px;
     border-radius: ${p => p.theme.radii.normal};
     cursor: pointer;
+    display: flex;
+    align-items: center;
      &.active {
     color: ${p => p.theme.colors.white};
     background-color: ${p => p.theme.colors.accent};
@@ -22,4 +30,12 @@ export const NavLinkStyled = styled(NavLink)`
   :hover{
         color: ${p => p.theme.colors.linkColor};
     };
+`;
+
+export const RegisterIconStyled = styled(FaRegCheckCircle)`
+    margin-right: ${p => p.theme.space[2]}px;
+`;
+
+export const LogInIconStyled = styled(AiOutlineLogin)`
+    margin-right: ${p => p.theme.space[2]}px;
 `;

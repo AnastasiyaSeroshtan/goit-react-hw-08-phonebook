@@ -1,10 +1,16 @@
-import { NavLinkStyled } from './UserAuth.styled';
+import { UserAuthWrapper, NavLinkStyled, RegisterIconStyled, LogInIconStyled } from './UserAuth.styled';
+// import { FaRegCheckCircle } from 'react-icons/fa';
+// import { AiOutlineLogin } from 'react-icons/ai';
 
 export const UserAuth = () => {
     return (
-        <nav>
-            <NavLinkStyled to="/register">Register</NavLinkStyled>
-            <NavLinkStyled  to="/login">Log In</NavLinkStyled>
-        </nav>
+        <UserAuthWrapper>
+            <NavLinkStyled to="/register">
+                <RegisterIconStyled />
+                Register</NavLinkStyled>
+            <NavLinkStyled  to="/login">
+                <LogInIconStyled />
+                Log In</NavLinkStyled>
+        </UserAuthWrapper>
     )
 }; 
